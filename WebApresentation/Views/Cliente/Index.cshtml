@@ -1,0 +1,66 @@
+﻿@model IEnumerable<WebApresentation.Models.ClienteModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table table-striped table-hover table-bordered" id="tbCliente">
+	<thead>
+		<tr>
+			<th>@Html.DisplayName("Nome")</th>
+		</tr>
+		<tr>
+			<th>@Html.DisplayName("Rg")</th>
+		</tr>
+		<tr>
+			<th>@Html.DisplayName("Endereco")</th>
+		</tr>
+		<tr>
+			<th>@Html.DisplayName("Bairro")</th>
+		</tr>
+		<tr>
+			<th>@Html.DisplayName("Cidade")</th>
+		</tr>
+		<tr>
+			<th>@Html.DisplayName("Estado")</th>
+		</tr>
+		<tr>
+			<th>@Html.DisplayName("CEP")</th>
+		</tr>
+		<tr>
+			<th>@Html.DisplayName("Data Nascimento")</th>
+		</tr>
+	</thead>
+	<tbody>
+		 @foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@item.nomeCliente
+				</td>
+				<td>
+					@item.rgCliente
+				</td>
+				<td>
+					@item.enderecoCliente
+				</td>
+				<td>
+					@item.bairroCliente
+				</td>
+				<td>
+					@item.cidadeCliente
+				</td>
+				<td>
+					@item.estadoCliente
+				</td>
+				<td>
+					@item.CEPCliente
+				</td>
+				<td>
+					@item.nascimentoCliente
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
