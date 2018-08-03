@@ -10,7 +10,10 @@ namespace DomainClass.Serviços
 {
 	public class ServUser : IServUser
 	{
-		User TipoTelefone(string telefone, int ID);
 
+		public Entidades.Telefone TipoTelefone(double telefone, int codChale)
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

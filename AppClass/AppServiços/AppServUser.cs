@@ -9,9 +9,10 @@ namespace AppClass.AppServiços
 {
 	public class AppServUser : IAppServ
 	{
-		public DomainClass.Entidades.User TipoTelefone(string telefone, int ID)
+		public DomainClass.Entidades.Telefone TipoTelefone(double telefone, int codChale)
 		{
 			throw new NotImplementedException();
 		}
+
 	}
 }

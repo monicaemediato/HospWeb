@@ -8,14 +8,14 @@ namespace DomainClass.Entidades
 {
 	public class User
 	{
-		public int ID { get; set; }
-		public string cNome { get; set; }
-		public double cRG { get; set; }
-		public string cEndereco { get; set; }
-		public string cBairro { get; set; }
-		public string cCidade { get; set; }
-		public string cEstado { get; set; }
-		public string cCEP { get; set; }
-		public DateTime cNascimento { get; set; }
+		public int codCliente { get; protected set; }
+		public string nomeCliente { get; set; }
+		public double rgCliente { get; set; }
+		public string enderecoCliente { get; set; }
+		public string bairroCliente { get; set; }
+		public string cidadeCliente { get; set; }
+		public string estadoCliente { get; set; }
+		public string CEPCliente { get; set; }
+		public DateTime nascimentoCliente { get; set; }
 	}
 }

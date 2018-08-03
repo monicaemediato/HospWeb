@@ -11,7 +11,7 @@ namespace DataAccess.Repositórios
 	public class ReposUser : iRepos
 
 	{
-		public User TipoTelefone(string telefone, int ID)
+		public DomainClass.Entidades.Telefone TipoTelefone(double telefone, int codChale)
 		{
 			throw new NotImplementedException();
 		}

@@ -9,6 +9,6 @@ namespace DomainClass.Interfaces.Serviços
 {
 	public interface IServUser
 	{
-		User TipoTelefone(string telefone, int ID);
+		Telefone TipoTelefone(double telefone, int codChale);
 	}//metodo retorna usuario - tipo telefone
 }

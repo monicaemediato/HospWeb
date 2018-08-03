@@ -10,9 +10,9 @@ namespace AppClass.IAppServiços
 	public interface IAppServ
 	{
 
-		User TipoTelefone(string telefone, int ID);
+		Telefone TipoTelefone(double telefone, int codChale);
 	}
 }
-]
+
 
 //telefone seria uma nova entidade do dominio?

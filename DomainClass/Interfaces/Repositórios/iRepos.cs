@@ -9,6 +9,6 @@ namespace DomainClass.Interfaces.Repositórios
 {
 	public interface iRepos
 	{
-		User TipoTelefone(string telefone, int ID);
+		Telefone TipoTelefone(double telefone, int codChale);
 	}
 }

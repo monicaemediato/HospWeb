@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Chale.cs" />
+    <Compile Include="Entidades\Hospedagem.cs" />
+    <Compile Include="Entidades\Telefone.cs" />
     <Compile Include="Entidades\User.cs" />
     <Compile Include="Interfaces\Repositórios\iRepos.cs" />
     <Compile Include="Interfaces\Serviços\IServUser.cs" />
