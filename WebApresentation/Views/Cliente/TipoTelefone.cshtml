@@ -1,0 +1,41 @@
+﻿@model WebApresentation.Models.TipoTelefoneModel
+@{
+	ViewBag.Title = "TipoTelefone";
+}
+
+@using (Html.BeginForm("TipoTelefone", "Telefone", FormMethod.Post, new { id = "FormsTelefone" }))
+{
+	//Home deveria ser TelefoneController, entretanto está dando erro na DataAccess.dll
+
+	<div class="row"><span>Form telefone </span></div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="form-group">
+				<label class="control-label">
+					@Html.LabelFor(x => x.Telefone)
+				</label>
+				<div class="controls">
+					@Html.TextBoxFor(m => m.Telefone, new { @class = "span12 m-warp", maxlength = "11" })
+					<span class="coloRed help-block">
+						@Html.ValidationMessageFor(m => m.Telefone)
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<div class="form-group">
+				<label class="control-label">
+					@Html.LabelFor(x => x.codCliente)
+				</label>
+				<div class="controls">
+					@Html.TextBoxFor(m => m.codCliente, new { @class = "span12 m-warp", maxlength = "20" })
+					<span class="coloRed help-block">
+						@Html.ValidationMessageFor(m => m.codCliente)
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+}

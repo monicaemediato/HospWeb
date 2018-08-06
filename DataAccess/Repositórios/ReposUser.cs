@@ -11,9 +11,21 @@ namespace DataAccess.Repositórios
 	public class ReposUser : iRepos
 
 	{
-		public DomainClass.Entidades.Telefone TipoTelefone(double telefone, int codChale)
+		public Telefone TipoTelefone(double telefone, int codCliente)
 		{
-			throw new NotImplementedException();
+			try
+			{
+				Telefone novoTelefone = new Telefone()
+				{
+					telefone = 1.3212
+				};
+				return novoTelefone;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+			}
 		}
 	}
 }

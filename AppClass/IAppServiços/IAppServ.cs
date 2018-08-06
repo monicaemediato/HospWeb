@@ -10,7 +10,8 @@ namespace AppClass.IAppServiços
 	public interface IAppServ
 	{
 
-		Telefone TipoTelefone(double telefone, int codChale);
+		Telefone TipoTelefone(double telefone, int codCliente);
+		//object TipoTelefone(double telefone, string codCliente);
 	}
 }
 

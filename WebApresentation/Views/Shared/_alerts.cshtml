@@ -1,0 +1,23 @@
+﻿
+@{
+	var alerts = TempData.ContainsKey(WebApresentation.Helpers.Alert.TempDataKey) //alerts verifica se a chave é tempdatakey
+		? (List<WebApresentation.Helpers.Alert>)TempData[WebApresentation.Helpers.Alert.TempDataKey] //se tiver pega a posição onde ta a chave e atribui a lista de alertas
+		: new List<WebApresentation.Helpers.Alert>(); //se nao, recebe lista vazia
+
+	if (alerts.Any())
+	{
+
+		foreach (var alert in alerts)
+		{
+			var dismissableClass = alert.Dismissable ? "alert-dismissable" : null; 
+		<div class="alert alert-@alert.AlertStyle @dismissableClass">
+			@if (alert.Dismissable)
+			{
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times; </button>
+			}
+			@Html.Raw(alert.Message)
+		</div>
+			}
+		}
+	}
+

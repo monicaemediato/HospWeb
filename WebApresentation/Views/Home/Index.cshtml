@@ -1,11 +1,21 @@
 ﻿@{
-    ViewBag.Title = "Página principal";
+	ViewBag.Title = "Página principal";
 }
 
 <div class="jumbotron">
-    <h1>Hosp Web 42.NET</h1>
-    <p class="lead">Hospede!</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+	<h1>Hosp Web 42.NET</h1>
+	<p class="lead">Hospede!</p>
+</div>
+
+
+<div class="row">
+	<div class="cool-lg-6 boxShadow">
+		<input type="button" value="Cadastrar Cliente" id="btnCliente" />
+		<input type="button" value="Inlcuir Telefone Cliente" id="btnTelefone" />
+		<input type="button" value="Incluir Hospedagem" id="btnHosp" />
+		<input type="button" value="Inlcuir Chalé" id="btnChale" />
+	</div>
+	<br><br>
 </div>
 
 <div class="row">
@@ -24,3 +34,36 @@
 	</div>
 
 </div>
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+
+<script type="text/javascript">
+//("btnCliente").on("click", function () {
+//		alert("Alerta Cadastro CLiente");
+//	});
+
+//	$('btnHosp').click(function () {
+//		alert("Hospedagem");
+//	});
+//	});
+
+	$(document).ready(function () {
+		$("#btnCliente").click(function () {
+			alert("Cadastro CLiente");
+			window.location.href = "/Cliente/cadview"
+		});
+	});
+
+	$(document).ready(function () {
+		$("#btnHosp").click(function () {
+			alert("/Cliente/TipoTelefone");
+		});
+	});
+
+	$(document).ready(function () {
+		$("#btnHosp").click(function () {
+			alert("Cadastro Hospedagem");
+		});
+	});
+
+</script>

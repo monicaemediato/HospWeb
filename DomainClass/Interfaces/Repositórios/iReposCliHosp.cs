@@ -1,5 +1,4 @@
-﻿using DomainClass.Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace DomainClass.Interfaces.Repositórios
 {
-	public interface iRepos
+	class iReposCliHosp
 	{
-		Telefone TipoTelefone(double telefone, int codCliente);
 	}
 }

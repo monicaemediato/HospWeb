@@ -3,150 +3,196 @@
 @{
 	ViewBag.Title = "CadView";
 }
+@{Html.RenderPartial("~/Views/Shared/_alerts.cshtml");}
 
 <h2>Cliente</h2>
-@using (Html.BeginForm("CadView", "Cliente", FormMethod.Post, new { id = "fmCliente", enctype = "multipart/form-data"}))
-
-<div class="row">
-	<div class="col-md-10">
-		<div class="form-group">
-			<label class="control-label">
-				@Html.LabelFor(x => x.nomeCliente)
-			</label>
-			<div class="controls">
-				@Html.TextBoxFor(m => m.nomeCliente, new { @class = "span12 m-warp", maxlength = "100" })
-				<span class="coloRed help-block">
-					@Html.ValidationMessageFor(m => m.nomeCliente)
-				</span>
+@using (Html.BeginForm("CadView", "Cliente", FormMethod.Post, new { id = "fmCliente", enctype = "multipart/form-data" }))
+{
+	<div class="row">
+		<div class="col-md-10">
+			<div class="form-group">
+				<label class="control-label">
+					@Html.LabelFor(x => x.nomeCliente)
+				</label>
+				<div class="controls">
+					@Html.TextBoxFor(m => m.nomeCliente, new { @class = "span12 m-warp", maxlength = "100" })
+					<span class="coloRed help-block">
+						@Html.ValidationMessageFor(m => m.nomeCliente)
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="row">
-	<div class="col-md-10">
-		<div class="form-group">
-			<label class="control-label">
-				@Html.LabelFor(x => x.rgCliente)
-			</label>
-			<div class="controls">
-				@Html.TextBoxFor(m => m.rgCliente, new { @class = "span12 m-warp", maxlength = "100" })
-				<span class="coloRed help-block">
-					@Html.ValidationMessageFor(m => m.rgCliente)
-				</span>
+	<div class="row">
+		<div class="col-md-10">
+			<div class="form-group">
+				<label class="control-label">
+					@Html.LabelFor(x => x.rgCliente)
+				</label>
+				<div class="controls">
+					@Html.TextBoxFor(m => m.rgCliente, new { @class = "span12 m-warp", maxlength = "100" })
+					<span class="coloRed help-block">
+						@Html.ValidationMessageFor(m => m.rgCliente)
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="row">
-	<div class="col-md-10">
-		<div class="form-group">
-			<label class="control-label">
-				@Html.LabelFor(x => x.enderecoCliente)
-			</label>
-			<div class="controls">
-				@Html.TextBoxFor(m => m.enderecoCliente, new { @class = "span12 m-warp", maxlength = "100" })
-				<span class="coloRed help-block">
-					@Html.ValidationMessageFor(m => m.enderecoCliente)
-				</span>
+	<div class="row">
+		<div class="col-md-10">
+			<div class="form-group">
+				<label class="control-label">
+					@Html.LabelFor(x => x.enderecoCliente)
+				</label>
+				<div class="controls">
+					@Html.TextBoxFor(m => m.enderecoCliente, new { @class = "span12 m-warp", maxlength = "100" })
+					<span class="coloRed help-block">
+						@Html.ValidationMessageFor(m => m.enderecoCliente)
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="row">
-	<div class="col-md-10">
-		<div class="form-group">
-			<label class="control-label">
-				@Html.LabelFor(x => x.enderecoCliente)
-			</label>
-			<div class="controls">
-				@Html.TextBoxFor(m => m.enderecoCliente, new { @class = "span12 m-warp", maxlength = "100" })
-				<span class="coloRed help-block">
-					@Html.ValidationMessageFor(m => m.enderecoCliente)
-				</span>
+	<div class="row">
+		<div class="col-md-10">
+			<div class="form-group">
+				<label class="control-label">
+					@Html.LabelFor(x => x.bairroCliente)
+				</label>
+				<div class="controls">
+					@Html.TextBoxFor(m => m.bairroCliente, new { @class = "span12 m-warp", maxlength = "100" })
+					<span class="coloRed help-block">
+						@Html.ValidationMessageFor(m => m.bairroCliente)
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="row">
-	<div class="col-md-10">
-		<div class="form-group">
-			<label class="control-label">
-				@Html.LabelFor(x => x.bairroCliente)
-			</label>
-			<div class="controls">
-				@Html.TextBoxFor(m => m.bairroCliente, new { @class = "span12 m-warp", maxlength = "100" })
-				<span class="coloRed help-block">
-					@Html.ValidationMessageFor(m => m.bairroCliente)
-				</span>
+	<div class="row">
+		<div class="col-md-10">
+			<div class="form-group">
+				<label class="control-label">
+					@Html.LabelFor(x => x.cidadeCliente)
+				</label>
+				<div class="controls">
+					@Html.TextBoxFor(m => m.cidadeCliente, new { @class = "span12 m-warp", maxlength = "100" })
+					<span class="coloRed help-block">
+						@Html.ValidationMessageFor(m => m.cidadeCliente)
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="row">
-	<div class="col-md-10">
-		<div class="form-group">
-			<label class="control-label">
-				@Html.LabelFor(x => x.cidadeCliente)
-			</label>
-			<div class="controls">
-				@Html.TextBoxFor(m => m.cidadeCliente, new { @class = "span12 m-warp", maxlength = "100" })
-				<span class="coloRed help-block">
-					@Html.ValidationMessageFor(m => m.cidadeCliente)
-				</span>
+	<div class="row">
+		<div class="col-md-10">
+			<div class="form-group">
+				<label class="control-label">
+					@Html.LabelFor(x => x.estadoCliente)
+				</label>
+				<div class="controls">
+					@Html.TextBoxFor(m => m.estadoCliente, new { @class = "span12 m-warp", maxlength = "100" })
+					<span class="coloRed help-block">
+						@Html.ValidationMessageFor(m => m.estadoCliente)
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="row">
-	<div class="col-md-10">
-		<div class="form-group">
-			<label class="control-label">
-				@Html.LabelFor(x => x.estadoCliente)
-			</label>
-			<div class="controls">
-				@Html.TextBoxFor(m => m.estadoCliente, new { @class = "span12 m-warp", maxlength = "100" })
-				<span class="coloRed help-block">
-					@Html.ValidationMessageFor(m => m.estadoCliente)
-				</span>
+	<div class="row">
+		<div class="col-md-10">
+			<div class="form-group">
+				<label class="control-label">
+					@Html.LabelFor(x => x.CEPCliente)
+				</label>
+				<div class="controls">
+					@Html.TextBoxFor(m => m.CEPCliente, new { @class = "span12 m-warp", maxlength = "100" })
+					<span class="coloRed help-block">
+						@Html.ValidationMessageFor(m => m.CEPCliente)
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div class="row">
-	<div class="col-md-10">
-		<div class="form-group">
-			<label class="control-label">
-				@Html.LabelFor(x => x.CEPCliente)
-			</label>
-			<div class="controls">
-				@Html.TextBoxFor(m => m.CEPCliente, new { @class = "span12 m-warp", maxlength = "100" })
-				<span class="coloRed help-block">
-					@Html.ValidationMessageFor(m => m.CEPCliente)
-				</span>
-			</div>
-		</div>
-	</div>
-</div>
+	//<div class="row">
+	//	<div class="col-md-10">
+	//		<div class="form-group">
+	//			<label class="control-label">
+	//				@Html.LabelFor(x => x.nascimentoCliente)
+	//			</label>
+	//			<div class="controls">
+	//				@Html.TextBoxFor(m => m.nascimentoCliente, new { @class = "span12 m-warp", maxlength = "100" })
+	//				<span class="coloRed help-block">
+	//					@Html.ValidationMessageFor(m => m.nascimentoCliente)
+	//				</span>
+	//			</div>
+	//		</div>
+	//	</div>
+	//</div>
 
-<div class="row">
-	<div class="col-md-10">
-		<div class="form-group">
-			<label class="control-label">
-				@Html.LabelFor(x => x.nascimentoCliente)
-			</label>
-			<div class="controls">
-				@Html.TextBoxFor(m => m.nascimentoCliente, new { @class = "span12 m-warp", maxlength = "100" })
-				<span class="coloRed help-block">
-					@Html.ValidationMessageFor(m => m.nascimentoCliente)
-				</span>
-			</div>
-		</div>
-	</div>
-</div>
+	<input type="submit" value="Salvar" />
+
+	<input type="button" value="Adicionar números para contato " id="btnTelefone" />
+
+	<input type="submit" value="Incluir Hospedagem para cliente"  id="btnHospedagem"/>
+
+
+}
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script>
+	$(document).ready(function () {
+		console.log("ready!");
+
+		$.ajax({
+			type: 'GET',
+			url: 'http://viacep.com.br/ws/01001000/json/',
+			//	data: { idCliente: 1 },
+			success: function (data) {
+				console.log(data)
+			}
+		})
+
+		$.ajax({
+			type: 'POST',
+			url: '.../Cliente/setCliente',
+			data: { nomeCliente: 'Maria' },
+			success: function (data) {
+				alert(data)
+			}
+		})
+
+			< script type = "text/javascript" >
+				// ("btnCliente").on("click", function () {
+				//		alert("Alerta Cadastro CLiente");
+				//	});
+
+				//	$('btnHosp').click(function () {
+				//		alert("Hospedagem");
+				//	});
+				//	});
+
+				$(document).ready(function () {
+					$("#btnCliente").click(function () {
+						alert("Cadastro CLiente");
+						window.location.href = "/Cliente/cadview"
+					});
+				});
+		$(document).ready(function () {
+			$("#btnTipoTelefone").click(function () {
+				alert("Cadastro Telefone");
+				window.location.href = "/Telefone/TelefoneView"
+			});
+		});
+
+
+	});
+
+
+</script>

@@ -45,8 +45,14 @@
     <Compile Include="Entidades\Telefone.cs" />
     <Compile Include="Entidades\User.cs" />
     <Compile Include="Interfaces\Repositórios\iRepos.cs" />
+    <Compile Include="Interfaces\Repositórios\iReposCliHosp.cs" />
+    <Compile Include="Interfaces\Repositórios\iReposHospServ.cs" />
+    <Compile Include="Interfaces\Serviços\IClienteHosp.cs" />
+    <Compile Include="Interfaces\Serviços\IServHosp.cs" />
     <Compile Include="Interfaces\Serviços\IServUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Serviços\ClienteHosp.cs" />
+    <Compile Include="Serviços\ServHosp.cs" />
     <Compile Include="Serviços\ServUser.cs" />
   </ItemGroup>
   <ItemGroup />

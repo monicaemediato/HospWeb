@@ -1,4 +1,5 @@
 ﻿using DomainClass.Entidades;
+using DomainClass.Interfaces.Repositórios;
 using DomainClass.Interfaces.Serviços;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,16 @@ namespace DomainClass.Serviços
 	public class ServUser : IServUser
 	{
 
-		public Entidades.Telefone TipoTelefone(double telefone, int codChale)
+		private iRepos _repository;
+
+		public ServUser(iRepos repository)
 		{
-			throw new NotImplementedException();
+			_repository = repository;
+		}
+
+		public Telefone TipoTelefone(double telefone, int codCliente)
+		{
+			return _repository.TipoTelefone(telefone, codCliente);
 		}
 	}
 }

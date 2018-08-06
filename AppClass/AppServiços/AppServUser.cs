@@ -1,4 +1,5 @@
 ﻿using AppClass.IAppServiços;
+using DomainClass.Interfaces.Serviços;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,16 @@ namespace AppClass.AppServiços
 {
 	public class AppServUser : IAppServ
 	{
-		public DomainClass.Entidades.Telefone TipoTelefone(double telefone, int codChale)
+		private IServUser _services;
+
+		public AppServUser(IServUser services)
 		{
-			throw new NotImplementedException();
+			_services = services;
 		}
 
+		public DomainClass.Entidades.Telefone TipoTelefone(double telefone, int codCliente)
+		{
+			return _services.TipoTelefone(telefone, codCliente);
+		}
 	}
 }
